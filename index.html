@@ -375,36 +375,53 @@
         }
         .toc-rules {
             display: grid;
-            grid-template-columns: repeat(11, 1fr);
-            gap: 6px;
-            max-width: 600px;
+            grid-template-columns: repeat(7, 1fr);
+            gap: 8px;
+            max-width: 720px;
             margin: 0 auto;
         }
         .toc-rules a {
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            aspect-ratio: 1;
+            padding: 10px 4px;
             background: rgba(15, 23, 42, 0.8);
             border: 1px solid rgba(250, 204, 21, 0.25);
             border-radius: 8px;
             color: #cbd5e1;
             text-decoration: none;
-            font-size: 13px;
-            font-weight: 600;
             transition: all 0.15s;
+            line-height: 1.2;
+            gap: 4px;
+        }
+        .toc-rules .r-num {
+            font-size: 13px;
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+        .toc-rules .r-tag {
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1px;
         }
         .toc-rules a:hover {
             background: var(--gold);
-            color: var(--deep-navy);
             border-color: var(--gold);
-            transform: scale(1.08);
+            transform: translateY(-2px);
+        }
+        .toc-rules a:hover .r-num,
+        .toc-rules a:hover .r-tag {
+            color: var(--deep-navy);
         }
         @media (max-width: 768px) {
             .toc { padding: 20px 18px; }
             .toc-link { padding: 8px 16px; font-size: 13px; letter-spacing: 1px; }
-            .toc-rules { grid-template-columns: repeat(7, 1fr); }
-            .toc-rules a { font-size: 12px; }
+            .toc-rules { grid-template-columns: repeat(4, 1fr); gap: 6px; }
+            .toc-rules a { padding: 8px 4px; }
+            .toc-rules .r-num { font-size: 12px; }
+            .toc-rules .r-tag { font-size: 12px; letter-spacing: 0; }
         }
 
         /* === 浮動回目錄按鈕 === */
@@ -466,7 +483,27 @@
                 </div>
                 <div class="toc-rules-label">點數字直達守則</div>
                 <div class="toc-rules">
-                    <a href="#r1">01</a><a href="#r2">02</a><a href="#r3">03</a><a href="#r4">04</a><a href="#r5">05</a><a href="#r6">06</a><a href="#r7">07</a><a href="#r8">08</a><a href="#r9">09</a><a href="#r10">10</a><a href="#r11">11</a><a href="#r12">12</a><a href="#r13">13</a><a href="#r14">14</a><a href="#r15">15</a><a href="#r16">16</a><a href="#r17">17</a><a href="#r18">18</a><a href="#r19">19</a><a href="#r20">20</a><a href="#r21">21</a>
+                    <a href="#r1"><span class="r-num">01</span><span class="r-tag">在乎</span></a>
+                    <a href="#r2"><span class="r-num">02</span><span class="r-tag">地圖</span></a>
+                    <a href="#r3"><span class="r-num">03</span><span class="r-tag">思考</span></a>
+                    <a href="#r4"><span class="r-num">04</span><span class="r-tag">解決</span></a>
+                    <a href="#r5"><span class="r-num">05</span><span class="r-tag">痕跡</span></a>
+                    <a href="#r6"><span class="r-num">06</span><span class="r-tag">交接</span></a>
+                    <a href="#r7"><span class="r-num">07</span><span class="r-tag">失敗</span></a>
+                    <a href="#r8"><span class="r-num">08</span><span class="r-tag">執行</span></a>
+                    <a href="#r9"><span class="r-num">09</span><span class="r-tag">判斷力</span></a>
+                    <a href="#r10"><span class="r-num">10</span><span class="r-tag">聽得懂</span></a>
+                    <a href="#r11"><span class="r-num">11</span><span class="r-tag">主動</span></a>
+                    <a href="#r12"><span class="r-num">12</span><span class="r-tag">搬運工</span></a>
+                    <a href="#r13"><span class="r-num">13</span><span class="r-tag">客戶聲音</span></a>
+                    <a href="#r14"><span class="r-num">14</span><span class="r-tag">提煉</span></a>
+                    <a href="#r15"><span class="r-num">15</span><span class="r-tag">不知道</span></a>
+                    <a href="#r16"><span class="r-num">16</span><span class="r-tag">複雜</span></a>
+                    <a href="#r17"><span class="r-num">17</span><span class="r-tag">環境確認</span></a>
+                    <a href="#r18"><span class="r-num">18</span><span class="r-tag">語音糾偏</span></a>
+                    <a href="#r19"><span class="r-num">19</span><span class="r-tag">心跳意義</span></a>
+                    <a href="#r20"><span class="r-num">20</span><span class="r-tag">啟動協議</span></a>
+                    <a href="#r21"><span class="r-num">21</span><span class="r-tag">一字不差</span></a>
                 </div>
             </nav>
 
